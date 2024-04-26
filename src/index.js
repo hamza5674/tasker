@@ -1,12 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import GlobalStyles from './styles/index';
+// import { configureHeaders } from 'libs/http-service/interceptors/http.interceptors';
+// import { configureInterceptors } from 'libs/http-service/interceptors/http.interceptors';
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+// configureHeaders();
+// configureInterceptors();
+
 root.render(
   <React.StrictMode>
+    <GlobalStyles />
     <App />
   </React.StrictMode>
 );
