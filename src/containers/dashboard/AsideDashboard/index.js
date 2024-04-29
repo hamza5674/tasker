@@ -23,78 +23,72 @@ import action from "../../../../src/assets/images/action.png";
 
 
 function Dashboard() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const openSidebar = () => {
-    setIsSidebarOpen(true);
-  };
-  const closeSidebar = () => {
-    setIsSidebarOpen(false);
-  };
+ 
 
   const data = [
     {
       image: p1,
       name: "Admin1",
-      Email: "wakoman@gmail.com",
-      Phone: "042-6664772",
-      Acive: ok,
-      Action: action,
+      email: "wakoman@gmail.com",
+      phone: "042-6664772",
+      acive: ok,
+      action: action,
     },
     {
       image: p2,
       name: "Admin1",
-      Email: "wakoman@gmail.com",
-      Phone: "042-6664772",
-      Acive: ok,
-      Action: action,
+      email: "wakoman@gmail.com",
+      phone: "042-6664772",
+      acive: ok,
+      action: action,
     },
     {
       image: p3,
       name: "Admin1",
-      Email: "wakoman@gmail.com",
-      Phone: "042-6664772",
-      Acive: ok,
-      Action: action,
+      email: "wakoman@gmail.com",
+      phone: "042-6664772",
+      acive: ok,
+      action: action,
     },
     {
       image: p4,
       name: "Admin1",
-      Email: "wakoman@gmail.com",
-      Phone: "042-6664772",
-      Acive: ok,
-      Action: action,
+      email: "wakoman@gmail.com",
+      phone: "042-6664772",
+      acive: ok,
+      action: action,
     },
     {
       image: p5,
       name: "Admin1",
-      Email: "wakoman@gmail.com",
-      Phone: "042-6664772",
-      Acive: ok,
-      Action: action,
+      email: "wakoman@gmail.com",
+      phone: "042-6664772",
+      acive: ok,
+      action: action,
     },
     {
       image: p6,
       name: "Admin1",
-      Email: "wakoman@gmail.com",
-      Phone: "042-6664772",
-      Acive: ok,
-      Action: action,
+      email: "wakoman@gmail.com",
+      phone: "042-6664772",
+      acive: ok,
+      action: action,
     },
     {
       image: p7,
       name: "Admin1",
-      Email: "wakoman@gmail.com",
-      Phone: "042-6664772",
-      Acive: ok,
-      Action: action,
+      email: "wakoman@gmail.com",
+      phone: "042-6664772",
+      acive: ok,
+      action: action,
     },
     {
       image: p8,
       name: "Admin1",
-      Email: "wakoman@gmail.com",
-      Phone: "042-6664772",
-      Acive: ok,
-      Action: action,
+      email: "wakoman@gmail.com",
+      phone: "042-6664772",
+      acive: ok,
+      action: action,
     },
   ];
 
@@ -150,41 +144,43 @@ function Dashboard() {
                   </span>
                 </div>
               </div>
-              <div  style={{overflowX:"auto" }}>
-                <table className="table">
-                  <thead>
-                    <tr>
-                      <th>Name</th>
-                      <th>Email</th>
-                      <th>Phone</th>
-                      <th>Active</th>
-                      <th>Actions</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {data.map((item) => (
-                      <tr>
-                        <td className="td-icon">
-                          <img src={item.image} alt="" />
-                          <p>{item.name}</p>
-                        </td>
-                        <td>
-                          <p>{item.Email}</p>
-                        </td>
-                        <td>
-                          <p>{item.Phone}</p>
-                        </td>
-                        <td>
-                          <img src={item.Acive} alt="" />
-                        </td>
-                        <td>
-                          <img src={item.Action} alt="" />
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
+              <div  className="scolling" style={{ overflowX: "auto" }} >
+              <table className="table" style={{width:"100%"}}>
+                <thead>
+                  <tr>
+                    <th className="wide-content">Name</th>
+                    <th className="wide-content">Email</th>
+                    <th className="wide-content">Phone</th>
+                    <th className="wide-content">Active</th>
+                    <th className="wide-content">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {data.map((item,index) => (
+                     <tr key={index}>
+                     <td className="td-icon">
+                       <div className="wide-content td-icon">
+                         <img src={item.image} alt="" />
+                         <p>{item.name}</p>
+                       </div>
+                     </td>
+                     <td>
+                       <div className="wide-content">{item.email}</div>
+                     </td>
+                     <td>
+                       <div className="wide-content">{item.phone}</div>
+                     </td>
+                     <td>
+                       <img src={item.acive} alt="" />
+                     </td>
+                     <td>
+                       <img src={item.action} alt="" />
+                     </td>
+                   </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
               <div className="pagination">
                 <span className="font-clr">Rows per page:</span>
                 <span>8</span>

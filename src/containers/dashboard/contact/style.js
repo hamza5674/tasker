@@ -1,7 +1,7 @@
 import styled from "styled-components";
 export const MainContact = styled.div`
 .Main-Top {
-
+  
   display: flex;
   justify-content: space-between;
 }
@@ -24,19 +24,26 @@ export const MainContact = styled.div`
   font-size: 14px;
   font-weight: 400;
 }
-.table-data {
+.table-cls{
+  
   margin-top: 40px;
+  
+}
+.table-data {
+  /* padding-bottom: 25px; */
 }
 .admin-panel {
   background-color: white;
   background: white;
   border: 1px solid rgba(223, 224, 235, 1);
   border-radius: 10px;
-  
+  margin-top: 30px;
 }
 .panel-content {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+ justify-content: space-between;
   padding: 25px 20px;
 }
 .panel-left button {
@@ -97,39 +104,51 @@ export const MainContact = styled.div`
 .td-icon {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 10px;
 }
-table {
-  width: 100%;
+.td-icon img{
+  border-radius: 50%;
 }
 
-th {
-  font-size: 14px;
-  color: #9fa2b4;
-  font-weight: 700;
-  text-align: start;
-  padding: 10px 20px;
-  border-bottom: 1px solid #dfe0eb;
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
 }
-.td-icon img {
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 5px 0px;
+.scolling{
+  overflow-x: auto !important;
+  
 }
-td {
-  font-size: 14px;
-  font-weight: 600;
-  padding: 0px 20px;
+
+.table th,
+.table td {
+  /* min-width: 150px; */
+  padding: 8px 12px;
+  text-align: left;
+  /* white-space: nowrap;  */
+  border-bottom: 1px solid #DFE0EB;
+  
+
 }
-tr td {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #dfe0eb;
+/* .wide-content {
+  min-width: 200px !important; 
+  white-space: nowrap;
+} */
+.table td{
+  padding-bottom: 15px;
+  
 }
+.table th{
+  padding-bottom: 20px;
+ 
+}
+
 .pagination {
   padding: 20px;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 .font-clr {
   color: #9fa2b4;
@@ -144,6 +163,7 @@ tr td {
   padding-top: 2px;
   font-size: 20px;
   color: #9fa2b4;
+  cursor: pointer;
 }
 .font-clr-size {
   color: #9fa2b4;
@@ -155,31 +175,52 @@ tr td {
   text-align: left;
 }
 .icon-1{
+  cursor: pointer;
+  font-size: 18px;
     color: #9fa2b4;
-    padding: 10px;
+    padding: 0px 10px;
 }
 .icon-2{
-    padding-top: 10px;
+  cursor: pointer;
+  font-size: 18px;
+    padding:0px 10px;
     color: #9fa2b4;
 }
+.icons-drp{
+  display: flex;
+  align-items: center;
+}
 .add-contact{
-    width: 120px;
-    height: 48px;
-    border-radius: 100px;
-    border: 0;
-    background-color: #29cc97;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left:auto;
-    margin-top: 20px;
-    margin-right: 30px;
-    
+  padding: 20px;
+  display: flex;
+  justify-content: end;
 }
-.add-contacts{
-    text-decoration: none;
-    font-size: 12px;
-    color: white;
+.add-contact button{
+  border: none;
+  font-size: 11px;
+  background: #29CC97;
+  padding: 20px;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
 }
+
+
+@media screen and (max-width: 900px) {
+  .scolling{
+    overflow-x: auto;
+  }
+  .table td{
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+}
+  
+
+
+
+
+
+}
+
 `

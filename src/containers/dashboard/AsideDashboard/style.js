@@ -38,11 +38,13 @@ export const TableDesign = styled.div`
   background: white;
   border: 1px solid rgba(223, 224, 235, 1);
   border-radius: 10px;
- 
+  margin-top: 30px;
 }
 .panel-content {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+ justify-content: space-between;
   padding: 25px 20px;
 }
 .panel-left button {
@@ -53,6 +55,7 @@ export const TableDesign = styled.div`
   border-radius: 30px;
   font-size: 11px;
   color: white;
+  cursor: pointer;
 }
 .btn-3 {
   display: flex;
@@ -65,16 +68,20 @@ export const TableDesign = styled.div`
   border-radius: 20px;
   border: 1px solid;
   background: white;
+  cursor: pointer;
 }
 
 .btn-pdf button {
   color: #f15b6d;
+  cursor: pointer;
 }
 .btn-excel button {
   color: #29cc97;
+  cursor: pointer;
 }
 .btn-print button {
   color: #04c6f0;
+  cursor: pointer;
 }
 .search-bar {
   margin-left: 35px;
@@ -104,39 +111,53 @@ export const TableDesign = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap;
 }
-table {
-  width: 100%;
+.td-icon img{
+  border-radius: 50%;
+}
+/* .scrolling-container {
+  overflow-x: auto !important;
+} */
+
+.scolling{
+  overflow-x: auto !important;
   
 }
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
 
-th {
-  font-size: 14px;
-  color: #9fa2b4;
-  font-weight: 700;
-  text-align: start;
-  padding: 10px 20px;
-  border-bottom: 1px solid #dfe0eb;
+.table th,
+.table td {
+  /* min-width: 150px; */
+  padding: 8px 12px;
+  text-align: left;
+  /* white-space: nowrap;  */
+  border-bottom: 1px solid #DFE0EB;
+  
+
 }
-.td-icon img {
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 5px 0px;
+/* .wide-content {
+  min-width: 200px !important; 
+  white-space: nowrap;
+} */
+.table td{
+  padding-bottom: 15px;
+  
 }
-td {
-  font-size: 14px;
-  font-weight: 600;
-  padding: 0px 20px;
+.table th{
+  padding-bottom: 20px;
+ 
 }
-tr td {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #dfe0eb;
-}
+
 .pagination {
   padding: 20px;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 .font-clr {
   color: #9fa2b4;
@@ -151,6 +172,7 @@ tr td {
   padding-top: 2px;
   font-size: 20px;
   color: #9fa2b4;
+  cursor: pointer;
 }
 .font-clr-size {
   color: #9fa2b4;
@@ -162,26 +184,47 @@ tr td {
   text-align: left;
 }
 .icon-1{
+  cursor: pointer;
+  font-size: 18px;
     color: #9fa2b4;
-    padding: 10px;
+    padding: 0px 10px;
 }
 .icon-2{
-    padding-top: 10px;
+  cursor: pointer;
+  font-size: 18px;
+    padding:0px 10px;
     color: #9fa2b4;
 }
-/* .btn-bars{
-  margin-left: 20px;
-  margin-top: 10px;
-  font-size: 20px;
+.icons-drp{
+  display: flex;
+  align-items: center;
+}
+.add-contact{
+  padding: 20px;
+  display: flex;
+  justify-content: end;
+}
+.add-contact button{
   border: none;
+  font-size: 11px;
+  background: #29CC97;
+  padding: 20px;
+  border-radius: 50px;
   color: white;
-  background: #29cc97;
-  padding: 5px;
-  border: #29cc97;
-  border-radius: 5px;
   cursor: pointer;
-} */
+}
 
+
+@media screen and (max-width: 900px) {
+  .scolling{
+    overflow-x: auto !important;
+  }
+  .table td{
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+}
+}
 
 
 `
